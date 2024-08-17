@@ -1,0 +1,17 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+  functions = "functions"
+
+[build.environment]
+  NPM_VERSION = "10.8.2"
+  NODE_VERSION = "v18.18.0"
+
+[dev]
+  command = "npm start"
+  targetPort = 3000
+  publish = "build"
+  functions = "functions"
+
+[[plugins]]
+  package = "@netlify/plugin-npm-install"
